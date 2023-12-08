@@ -11,7 +11,6 @@ api.get('/', (request, response) =>{
         } else {
         
         const parsedNotes = JSON.parse(data);
-        console.log(JSON.stringify(parsedNotes));
         response.json(parsedNotes);
 
 
@@ -29,7 +28,7 @@ api.post('/', (request, response) =>{
         const newNote = {
             title, 
             text,
-            note_id: uuid.v4(),
+            id: uuid.v4(),
         };
 
 
