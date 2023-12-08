@@ -1,3 +1,4 @@
+const { response } = require('express');
 const fs = require('fs');
 
 const api = require('express').Router();
@@ -56,5 +57,48 @@ api.post('/', (request, response) =>{
     }
     response.redirect('back');
 });
+
+api.delete('/:id', (request, response) =>{
+    console.info(`${request.method} request received to delete an entry`);
+    const {id} = request.params;
+
+    fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        if (err) {
+        console.error(err);
+        } else {
+        
+        var parsedNotes = JSON.parse(data);
+        }
+   
+        const retainedEntries = []
+    
+        for(entry of parsedNotes) {
+            if(entry.id == id){
+                console.log(`Entry ${id} to be deleted so skip it`)
+            }
+            else{
+                retainedEntries.push(entry)
+            }
+        }
+
+        console.info(retainedEntries)
+
+        
+        fs.writeFile(
+            './db/db.json',
+            JSON.stringify(retainedEntries, null, 4),
+            (writeErr) =>
+            writeErr
+                ? console.error(writeErr)
+                : console.info('Successfully updated entry')
+        );
+   
+   
+    })
+   
+
+    
+    response.redirect('back');
+})
 
 module.exports = api;

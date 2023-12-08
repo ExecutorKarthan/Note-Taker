@@ -15,11 +15,6 @@
         "id": "0ae53985-43b5-4e0d-af69-7196064400c3"
     },
     {
-        "title": "Make a salad",
-        "text": "Waldorf",
-        "id": "7705aa66-257e-43b0-bc80-3edf036452d6"
-    },
-    {
         "title": "Buy presents",
         "text": "Its Christmas!",
         "id": "ea0d5e93-71f8-49e2-befe-8fbb336b8a8a"
@@ -33,5 +28,10 @@
         "title": "Pick up kids",
         "text": "One at school and the other at ballet",
         "id": "d9a40d8f-929e-42e4-a517-68494b5e38d2"
+    },
+    {
+        "title": "Get a new car",
+        "text": "You need a Nissan!",
+        "id": "78c5b93c-d4c9-4ab6-b21c-ad3f35066147"
     }
 ]
