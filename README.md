@@ -1,5 +1,5 @@
 # Note-Taker
-This project serves the user as a means to save notes in a to-do list style. 
+This project serves the user as a means to save notes in a to-do list style. This project can be found at [https://git.heroku.com/note-taker-project-app.git](https://git.heroku.com/note-taker-project-app.git) 
 
 ## Description
 This project was where I really began to understand how routing worked. I used a modular routing system and did not initially understand how the first argument of a route (variable.call(```This argument```)) was generating a server location. I initially thought that I needed to defined that each time, but then learned that a simple `\` allowed me to not add anything to the resource's location. This lead me to also understand that this location need not end in a file, but can be a reference to something that will execute in memory - specifically the api call. This project allowed me to leverage the uuid package for data id-tagging, which made adding data to and from a json file that I was using for a database much easier and precise.   
